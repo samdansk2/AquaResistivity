@@ -1,4 +1,4 @@
-# Python program to find the resistivity of sea water for a given salinity and temperature.
+# Python program to find the resistivity of sea water for given salinity and temperature.
 def resistivity(salinity,temperature):
     
     sp_conductance_from_table = 0.038065
@@ -12,4 +12,4 @@ temperature = 20
 
 result = resistivity(salinity,temperature)
 
-print("The Resistivity for the given salinity and temperature is " ,result)
+print("The Resistivity for the given salinity and temperature is :" ,result)
