@@ -15,3 +15,47 @@ functions:
       - sp_conductance_from_table: 0.038065
       - resistivity: 1 / sp_conductance_from_table
       - return: resistivity
+
+resistivity_data:
+  salinity:
+    [
+      1,
+      0.99,
+      0.89,
+      0.7,
+      0.525,
+      0.37,
+      0.24,
+      0.15,
+      0.065,
+      0.03,
+      0.01,
+      0,
+      0.01,
+      0.025,
+      0.045,
+      0.075,
+      0.1,
+      0.125,
+    ]
+  resistivity:
+    [
+      0,
+      0.02,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0,
+      1.1,
+      1.2,
+      1.3,
+      1.4,
+      1.5,
+      1.6,
+    ]
