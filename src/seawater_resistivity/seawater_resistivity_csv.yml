@@ -1,0 +1,21 @@
+---
+variables:
+  salinity: 15
+  sp_conductance_from_table: 0.038065
+  temperature: 20
+output:
+  - print: "The Resistivity for the given salinity and temperature is {result}"
+
+functions:
+  resistivity:
+    terms:
+      - salinity
+      - temperature
+    body:
+      - sp_conductance_from_table: 0.038065
+      - resistivity: 1 / sp_conductance_from_table
+      - return: resistivity
+
+resistivity_data:
+  input: csv
+  csv: seawater_conductance_with_temperature.csv
