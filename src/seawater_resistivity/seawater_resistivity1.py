@@ -34,7 +34,7 @@ def resistivity(salinity, temperature):
             temp_higher = temp
             break
 
-    # linear interpolation
+    # interpolation
     sp_cond_lower = table[salinity][temp_lower]
     sp_cond_higher = table[salinity][temp_higher]
     sp_conductance = sp_cond_lower + (sp_cond_higher - sp_cond_lower) * (temperature - temp_lower) / (temp_higher - temp_lower)
