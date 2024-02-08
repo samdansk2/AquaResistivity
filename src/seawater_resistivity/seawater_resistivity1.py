@@ -1,4 +1,10 @@
 def resistivity(salinity, temperature):
+    salinity = {
+        1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22
+    }
+    temperature = {
+        30,5,10,15,20,30
+    }
     table = {
         (1, 0): 0.001839, (1, 5): 0.002134, (1, 10): 0.002439, (1, 15): 0.002763, (1, 20): 0.003091, (1, 30): 0.003431,
     (2, 0): 0.003556, (2, 5): 0.004125, (2, 10): 0.004714, (2, 15): 0.005338, (2, 20): 0.005971, (2, 30): 0.006628,
@@ -25,23 +31,21 @@ def resistivity(salinity, temperature):
     }
 
     # nearest temperatures from the table
-    temp_lower = None
-    temp_higher = None
-    for temp in sorted(table[salinity].keys()):
-        if temp <= temperature:
-            temp_lower = temp
-        else:
-            temp_higher = temp
-            break
+    ab = [salinity, temperature - 5]
+    cd = [salinity, temperature + 5]
+    # Access values for corner points
+    sp_cond_ab = table.get(ab[0], {}).get(ab[1])
+    sp_cond_cd = table.get(cd[0], {}).get(cd[1])
 
-    # interpolation
-    sp_cond_lower = table[salinity][temp_lower]
-    sp_cond_higher = table[salinity][temp_higher]
-    sp_conductance = sp_cond_lower + (sp_cond_higher - sp_cond_lower) * (temperature - temp_lower) / (temp_higher - temp_lower)
-
-    resistivity = 1 / sp_conductance
-    
-    return resistivity
+    # Check if specific conductance values for both corner points exist
+    if sp_cond_ab is not None and sp_cond_cd is not None:
+        # interpolation
+        sp_conductance = sp_cond_ab + (sp_cond_cd - sp_cond_ab) * temperature- ab[1] / cd[1] - ab[1]
+        
+        resistivity = 1 / sp_conductance
+        return resistivity
+    else:
+        print(" No such value exist in the table") 
 
 salinity = int(input("enter salinity value :"))
 temperature = int(input("enter temperature value :"))
