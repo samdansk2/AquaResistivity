@@ -19,3 +19,4 @@ functions:
 resistivity_data:
   input: csv
   csv: seawater_conductance_with_temperature.csv
+  reference: https://github.com/vamseeachanta/digitalmodel/blob/master/docs/cathodic_protection/literature/course_notes_Appendix_A_Cathodic_Protection_Design.pdf
