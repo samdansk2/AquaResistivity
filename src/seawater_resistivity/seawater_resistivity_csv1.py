@@ -30,8 +30,8 @@ def calculate_resistivity(temperature, salinity):
     
     return resistivity
 
-temperature = 20
-salinity = 0.8 
+temperature = int(input("enter temperature value :"))
+salinity = float(input("enter salinity value :")) 
 
 result = calculate_resistivity(temperature, salinity)
 print("Resistivity:", round(result, 3))
