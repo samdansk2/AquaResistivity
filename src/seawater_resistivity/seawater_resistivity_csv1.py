@@ -13,15 +13,12 @@ df.head(10)
 df.tail(10)
 
 # %%
-df.describe()
-
-# %%
 def calculate_resistivity(temperature, salinity):
-    # Filtering the DataFrame based on the provided temperature and salinity
+    # checking for temperature and salinity values with input
     value = df[(df['Temperature (deg C)'] == temperature) & (df['Salinity (%)'] == salinity)]
     
     if value.empty:
-        filtered_data = df
+        value = df
         conductance = value['Conductance 1/(ohm.cm)'].mean()
     else:
         conductance = value['Conductance 1/(ohm.cm)'].values[0] 
@@ -35,9 +32,6 @@ salinity = float(input("enter salinity value :"))
 
 result = calculate_resistivity(temperature, salinity)
 print("Resistivity:", round(result, 3))
-
-# %%
-print(df.columns)
 
 
 
