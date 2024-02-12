@@ -1,28 +1,49 @@
-input:
-  csv: C:/Users/Samdan Shaik/Desktop/seawater/input_data.csv
+variables:
+  temperature: int
+  salinity: float
+  value: DataFrame
+  conductance: float
+  resistivity: float
+  result: float
 
-code: |
-  import pandas as pd
+functions:
+  read_csv:
+    module: pandas
+    function: read_csv
+    arguments:
+      filepath: $input['csv']
 
-  df = pd.read_csv(input['csv'])
-  df.head(10)
-
-  def calculate_resistivity(temperature, salinity):
-      # checking for temperature and salinity values
+  calculate_resistivity:
+    arguments: [temperature, salinity]
+    body: |
       value = df[(df['Temperature (deg C)'] == temperature) & (df['Salinity (%)'] == salinity)]
       
       if value.empty:
-          filtered_data = df
-          conductance = value['Conductance 1/(ohm.cm)'].mean()
+        value = df
+        conductance = value['Conductance 1/(ohm.cm)'].mean()
       else:
-          conductance = value['Conductance 1/(ohm.cm)'].values[0] 
+        conductance = value['Conductance 1/(ohm.cm)'].values[0]
       
       resistivity = 1 / conductance
       
       return resistivity
 
-  temperature = int(input("enter temperature value :"))
-  salinity = float(input("enter salinity value :")) 
-  
-  result = calculate_resistivity(temperature, salinity)
-  print("Resistivity:", round(result, 3))
+main:
+  - read_csv:
+      csv: C:/Users/Samdan Shaik/Desktop/seawater/input_data.csv
+  - input:
+      message: "Enter temperature value: "
+      variable: temperature
+      type: int
+  - input:
+      message: "Enter salinity value: "
+      variable: salinity
+      type: float
+  - calculate_resistivity:
+      temperature: $temperature
+      salinity: $salinity
+  - variable:
+      result: $calculate_resistivity
+  - print:
+      message: "Resistivity: $result"
+
