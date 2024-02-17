@@ -9,7 +9,7 @@ def test_calculation_with_known_input():
 
 def test_negative_temperature():
     with pytest.raises(ValueError):
-        calculate_resistivity(20,1.7)  # raise a ValueError
+        calculate_resistivity(20,-1.7)  # raise a ValueError
 
 def test_zero_salinity():
     result = calculate_resistivity(15,0.8)  
