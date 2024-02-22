@@ -3,7 +3,7 @@ import pandas as pd
 
 
 # %%
-df = pd.read_csv("C:/Users/Samdan Shaik/Desktop/seawater/input_data.csv")
+df = pd.read_csv("src/seawater_resistivity/input_data.csv")
 df
 
 # %%
