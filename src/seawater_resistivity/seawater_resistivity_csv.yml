@@ -30,7 +30,7 @@ functions:
 
 main:
   - read_csv:
-      csv: C:/Users/Samdan Shaik/Desktop/seawater/input_data.csv
+      csv: src/seawater_resistivity/input_data.csv
   - input:
       message: "Enter temperature value: "
       variable: temperature
