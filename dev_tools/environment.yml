@@ -1,0 +1,10 @@
+name: digitalmodel
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python
+  - pandas
+  - pip
+  - pip:
+      - assetutilities
