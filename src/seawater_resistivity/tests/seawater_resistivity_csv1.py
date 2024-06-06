@@ -3,14 +3,9 @@ import pandas as pd
 
 
 # %%
-df = pd.read_csv("src/seawater_resistivity/outputs.csv")
+df = pd.read_csv("src/seawater_resistivity/input_data.csv")
 df
 
-# %%
-df.head(10)
-
-# %%
-df.tail(10)
 
 # %%
 def calculate_resistivity(temperature, salinity):
