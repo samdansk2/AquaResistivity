@@ -1,5 +1,5 @@
 import pytest
-from seawater_resistivity_csv1 import calculate_resistivity
+from src.seawater.tests.seawater_resistivity_csv1 import calculate_resistivity
 
 def test_calculation_with_known_input():
     # Test calculation 

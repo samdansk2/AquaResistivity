@@ -1,15 +1,11 @@
-# %%
 import pandas as pd
 
-
-# %%
-df = pd.read_csv("src/seawater_resistivity/input_data.csv")
-df
+df = pd.read_csv("src/seawater/input_data.csv")
 
 
-# %%
+
 def calculate_resistivity(temperature, salinity):
-    # checking for temperature and salinity values with input
+    
     value = df[(df['Temperature (deg C)'] == temperature) & (df['Salinity (%)'] == salinity)]
     
     if value.empty:

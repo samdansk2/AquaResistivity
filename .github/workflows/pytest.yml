@@ -29,6 +29,6 @@ jobs:
         pip install -r dependencies.txt
     - name: Test with pytest
       run: |
-          pytest src/Ace-Task-1/tests
+          pytest src/seawater/tests
       
           
