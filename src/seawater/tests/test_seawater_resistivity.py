@@ -1,4 +1,9 @@
 import pytest
+import sys
+import os
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+
 from seawater_resistivity_csv import calculate_resistivity
 
 def test_calculation_with_known_input():

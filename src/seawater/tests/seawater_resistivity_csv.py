@@ -24,13 +24,13 @@ def calculate_resistivity(temperature, salinity):
     
     resistivity = 1 / conductance
     
-    return resistivity
+    return round(resistivity,3)
 
-temperature = int(input("enter temperature value :"))
+temperature = float(input("enter temperature value :"))
 salinity = float(input("enter salinity value :")) 
 
 result = calculate_resistivity(temperature, salinity)
-print("Resistivity:", round(result, 3))
+print("Resistivity:", result)
 
 
 
