@@ -7,7 +7,7 @@ seawater_dir = os.path.abspath(os.path.join(current_dir, '../../'))
 if seawater_dir not in sys.path:
     sys.path.insert(0, seawater_dir)
 
-from seawater_resistivity import calculate_resistivity
+from src.seawater_resistivity import calculate_resistivity
 
 def test_calculation_with_known_input():
     # Test calculation 
