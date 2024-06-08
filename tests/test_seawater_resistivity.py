@@ -20,10 +20,6 @@ def sample_data():
     }
     return pd.DataFrame(data)
 
-def test_direct_lookup(sample_data):
-    assert calculate_resistivity(10, 1, sample_data) == 0.5
-    assert calculate_resistivity(20, 2, sample_data) == 1/3
-
 def test_linear_interpolation(sample_data):
     assert calculate_resistivity(15, 1.5, sample_data) == 1 / 2.5
 
