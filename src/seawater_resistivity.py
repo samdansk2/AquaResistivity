@@ -6,6 +6,9 @@ df = pd.read_csv("src/seawater/input_data.csv")
 
 def calculate_resistivity(temperature, salinity):
     
+    if temperature < 0 or salinity < 0:
+        raise ValueError("Temperature and salinity must be non-negative values.")
+    
     value = df[(df['Temperature (deg C)'] == temperature) & (df['Salinity (%)'] == salinity)]
     
     if value.empty:
@@ -26,6 +29,7 @@ def calculate_resistivity(temperature, salinity):
 
 temperature = np.random.choice(df['Temperature (deg C)'])
 salinity = np.random.choice(df['Salinity (%)'])
+
 
 result = calculate_resistivity(temperature, salinity)
 print("Resistivity:", result)
