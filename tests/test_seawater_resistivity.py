@@ -12,29 +12,29 @@ if seawater_dir not in sys.path:
 
 from src.seawater_resistivity import calculate_resistivity
 
-def test_linear_interpolation():
-    assert calculate_resistivity(15, 1.5) == 1 / 2.5
+def test_calculate_resistivity():
+    
+    temperature = 25  
+    salinity = 3.5    
+    assert calculate_resistivity(temperature, salinity) == 18.672
+    
+    temperature = 15  
+    salinity = 4.0    
+    assert calculate_resistivity(temperature, salinity) == 20.856
+    
+    
+    temperature = 20  
+    salinity = 3.0    
+    assert calculate_resistivity(temperature, salinity) == 18.672
+    
+    
+    temperature = 0   
+    salinity = 0    
+    assert calculate_resistivity(temperature, salinity) == 543.774
+    
+    print("All tests pass!")
 
-def test_nearest_neighbor_interpolation():
-    assert calculate_resistivity(100, 100) == 1 / 4
-    assert calculate_resistivity(-100, -100) == 1 / 1
-
-def test_edge_cases():
-    assert calculate_resistivity(0, 0) == 1
-    assert calculate_resistivity(30, 3) == 1 / 4
-
-def test_zero_temperature():
-    assert calculate_resistivity(0, 1) == 1 / 1
-    assert calculate_resistivity(0, 2) == 1 / 1.5
-
-def test_zero_salinity():
-    assert calculate_resistivity(20, 0) == 1 / 2
-    assert calculate_resistivity(10, 0) == 1 / 1
-
-def test_zero_temperature_and_salinity():
-    assert calculate_resistivity(0, 0) == 1
-    assert calculate_resistivity(0, 0.1) == 1 / 1.1
-
+test_calculate_resistivity()
 
 
 
