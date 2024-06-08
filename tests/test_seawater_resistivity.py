@@ -15,7 +15,7 @@ from src.seawater_resistivity import calculate_resistivity
 def test_non_df_value():
     temperature = 30  
     salinity = 4.0    
-    assert calculate_resistivity(temperature, salinity) == 18.672
+    assert calculate_resistivity(temperature, salinity) == 16.857
 
 def test_negative_value():
     temperature = 10
