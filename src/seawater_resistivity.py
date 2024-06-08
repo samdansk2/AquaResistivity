@@ -4,8 +4,8 @@ from scipy.interpolate import griddata
 
 df = pd.read_csv("src/seawater/input_data.csv")
 
-temperature = df['Temperature (deg C)']
-salinity = df['Salinity (%)']
+temperature = 15 #(deg C)
+salinity = 2 #(%)
 
 
 def calculate_resistivity(temperature, salinity):
