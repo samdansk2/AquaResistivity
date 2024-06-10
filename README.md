@@ -33,11 +33,11 @@ create the conda environment in miniconda prompt for good logic flow
 To calculate the resistivity of seawater, run the **calculate_resistivity.py** script. You can modify the temperature and salinity values as needed.
   * #### Testing
 
-  To run the tests, execute the test_calculate_resistivity.py script. This script contains several test cases to validate the calculate_resistivity function, including :
-    * Calculations using values directly from the dataset.
-    * Calculations using values not present in the dataset.
-    * Handling of extreme values.
-    * Verification that a ValueError is raised for negative values.
+  To run the tests, execute the test_calculate_resistivity.py script. This script contains several test cases to validate the calculate_resistivity function, including:
+   * Calculations using values directly from the dataset.
+   * Calculations using values not present in the dataset.
+   * Handling of extreme values.
+   * Verification that a ValueError is raised for negative values.
 
 ## Contributing
 
