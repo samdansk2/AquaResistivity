@@ -14,23 +14,22 @@ The repository is equipped with a script for performing the calculation, as well
 
 1. Clone the repository
     - `git clone repository url`
-    - `cd repositoryname`
 2. Install required packages from requirements.txt file
     - `pip install -r requirements.txt`
 
 ## Create Conda Environment
 
-Create the conda environment in miniconda prompt for good logic flow
+Create the conda environment in miniconda prompt for good logic flow, if only installed miniconda3 in your system.
 - open miniconda prompt
 - navigate to the repository location
     - `cd location folder`
-- `conda create --name seawater-resistivity python=3.10`
+    - `conda create --name seawater-resistivity python=3.10`
 - activate the environment
     - `conda activate seawater-resistivity`
 
 ## Usage
 
-To calculate the resistivity of seawater, run the **calculate_resistivity.py** script. You can modify the temperature and salinity values as needed.
+To calculate the resistivity of seawater, select the conda environment first in VS Code run the **calculate_resistivity.py** script. You can modify the temperature and salinity values as needed.
 
 ### Testing
 
