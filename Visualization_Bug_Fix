@@ -1,4 +1,4 @@
 visualization add image to xy plot fixed :
-when we add image to xy plot , image coming with it's own axes , to place image properly in plot becomes difficult , the solution is below
+when we add image to xy plot , image coming with it's own axes , placing image properly in plot becomes difficult , the solution for this below
 
 story here : https://github.com/vamseeachanta/assetutilities/commit/235bdf367a2bdfa610b8a3554360ce42e5493b4b
