@@ -4,6 +4,6 @@ when we add image to xy plot , image coming with it's own axes , placing image p
 story here : https://github.com/vamseeachanta/assetutilities/commit/235bdf367a2bdfa610b8a3554360ce42e5493b4b
 
 visualization add image to polar plot fixed :
-when i add an image to simple polar plot , the image is half parted , jumbled in output plot , for this vamsee sir found a solution 
+when i add an image to simple polar plot , the image is half parted , jumbled in output plot( overlaid rectangular image is zoomed in ) , for this vamsee sir found a solution 
 that creating two plots , as 1 polar plot and 1 image plot 
 the link for this : https://github.com/vamseeachanta/assetutilities/commit/ccf1a9b1449f4cf7dec300b8a0bccb37959c2f7e
