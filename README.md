@@ -29,7 +29,7 @@ Create the conda environment in miniconda prompt for good logic flow, if only in
 
 ## Usage
 
-To calculate the resistivity of seawater, select the conda environment first in VS Code run the **calculate_resistivity.py** script. You can modify the temperature and salinity values as needed.
+To calculate the resistivity of seawater, select the conda environment first in VS Code to run the **calculate_resistivity.py** script. You can modify the temperature and salinity values as needed.
 
 ### Testing
 
