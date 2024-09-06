@@ -1,6 +1,6 @@
 # Introduction
 
-Simple python library provides a strategy for determining the resistivity of seawater based on given temperature and salinity inputs.
+Determining the resistivity of seawater based on given temperature and salinity inputs.
 The repository is equipped with a script for performing the calculation, as well as comprehensive tests to ensure reliability and accuracy.
 
 ## Files
